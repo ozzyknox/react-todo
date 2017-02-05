@@ -10,9 +10,8 @@ var AddTodo = React.createClass({
         if (todoText.length) {
             this.refs.todoText.value = '';
             this.props.onAddTodo(todoText);
-        } else {
-            this.refs.todoText.focus();
         }
+        this.refs.todoText.focus();
     },
 
     render: function() {
