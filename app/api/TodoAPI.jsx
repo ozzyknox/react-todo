@@ -15,10 +15,19 @@ module.exports = {
         } catch (error) { }
 
         return $.isArray(todos) ? todos : [];
+    },
+    filterTodos: function (todos, showCompleted, searchText) {
+        var filteredTodos = todos;
+
+        // Filter by showCompleted
+        filteredTodos = filteredTodos.filter((todo) => {
+            return !todo.completed || showCompleted;
+        });
+
+        // Filter by searchText
+
+        // Sort todos with non-completed first
+
+        return filteredTodos;
     }
 }
-
-//  [{id: uuid(), text: 'Walk the dog', completed: false}, 
-// {id: uuid(), text: 'Clean the yard', completed: true}, 
-// {id: uuid(), text: 'Take the kids to school', completed: true}, 
-// {id: uuid(), text: 'Pay the rent', completed: false}]
