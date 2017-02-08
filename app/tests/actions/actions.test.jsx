@@ -31,12 +31,12 @@ describe('Actions', () => {
         expect(res).toEqual(action);
     });
 
-    it('should generate toggleShowTodo action', () => {
+    it('should generate toggleTodo action', () => {
         var action = {
-            type: 'TOGGLE_SHOW_TODO',
+            type: 'TOGGLE_TODO',
             id: 1001
         };
-        var res = actions.toggleShowTodo(action.id);
+        var res = actions.toggleTodo(action.id);
 
         expect(res).toEqual(action);
     });    
