@@ -1,5 +1,7 @@
-var uuid = require('node-uuid');
-var moment = require('moment');
+// var uuid = require('node-uuid');
+import uuid from 'node-uuid';
+// var moment = require('moment');
+import moment from 'moment';
 
 export var searchTextReducer = (state = '', action) => {
     switch (action.type) {
